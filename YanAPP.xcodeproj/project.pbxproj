@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180062A52087A25C00B2D9EF /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062A42087A25C00B2D9EF /* AppDelegate+AppService.m */; };
+		180062AE20882D7100B2D9EF /* FinanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062AD20882D7100B2D9EF /* FinanceViewController.m */; };
+		180062B120882D7B00B2D9EF /* ServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062B020882D7B00B2D9EF /* ServiceViewController.m */; };
+		180062B320882E6A00B2D9EF /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180062B220882E6A00B2D9EF /* TabBar.xcassets */; };
+		180062B720882EA700B2D9EF /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180062B620882EA700B2D9EF /* Common.xcassets */; };
+		180062BC20882EF100B2D9EF /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062BB20882EF100B2D9EF /* DemoViewController.m */; };
+		180062C020882F0900B2D9EF /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062BF20882F0900B2D9EF /* MessageViewController.m */; };
+		180062C220883AC000B2D9EF /* Navigation.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180062C120883AC000B2D9EF /* Navigation.xcassets */; };
+		180062C720888CAB00B2D9EF /* DiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062C620888CAB00B2D9EF /* DiscoverViewController.m */; };
+		180062CB2088941A00B2D9EF /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 180062CA2088941A00B2D9EF /* BaseScrollView.m */; };
+		183ED1242085A9BA000226A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1232085A9BA000226A6 /* AppDelegate.m */; };
+		183ED12C2085A9BB000226A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183ED12B2085A9BB000226A6 /* Assets.xcassets */; };
+		183ED12F2085A9BB000226A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183ED12D2085A9BB000226A6 /* LaunchScreen.storyboard */; };
+		183ED1322085A9BB000226A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1312085A9BB000226A6 /* main.m */; };
+		183ED13C2085A9BB000226A6 /* YanAPPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED13B2085A9BB000226A6 /* YanAPPTests.m */; };
+		183ED1472085A9BB000226A6 /* YanAPPUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1462085A9BB000226A6 /* YanAPPUITests.m */; };
+		1840ACBA2085E89D00E248F4 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840ACB92085E89D00E248F4 /* RootTabBarController.m */; };
+		1840ACBE2085E8D300E248F4 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840ACBD2085E8D300E248F4 /* RootViewController.m */; };
+		1840ACC12085ED2A00E248F4 /* RootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1840ACC02085ED2A00E248F4 /* RootNavigationController.m */; };
+		188E52352085F3B7000D9BD8 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E52342085F3B7000D9BD8 /* HomeViewController.m */; };
+		188E52382085F3C6000D9BD8 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188E52372085F3C6000D9BD8 /* MineViewController.m */; };
+		46CF72FE088646AE09019B14 /* libPods-YanAPP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC38D00934A02CACCA0FC7A0 /* libPods-YanAPP.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		183ED1382085A9BB000226A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183ED1172085A9BA000226A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 183ED11E2085A9BA000226A6;
+			remoteInfo = YanAPP;
+		};
+		183ED1432085A9BB000226A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 183ED1172085A9BA000226A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 183ED11E2085A9BA000226A6;
+			remoteInfo = YanAPP;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		180062A32087A25C00B2D9EF /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		180062A42087A25C00B2D9EF /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		180062A62087A89D00B2D9EF /* ScreenMarcos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenMarcos.h; sourceTree = "<group>"; };
+		180062A72087AB2F00B2D9EF /* CommonMarcos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMarcos.h; sourceTree = "<group>"; };
+		180062AC20882D7100B2D9EF /* FinanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FinanceViewController.h; sourceTree = "<group>"; };
+		180062AD20882D7100B2D9EF /* FinanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FinanceViewController.m; sourceTree = "<group>"; };
+		180062AF20882D7B00B2D9EF /* ServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceViewController.h; sourceTree = "<group>"; };
+		180062B020882D7B00B2D9EF /* ServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceViewController.m; sourceTree = "<group>"; };
+		180062B220882E6A00B2D9EF /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TabBar.xcassets; sourceTree = "<group>"; };
+		180062B620882EA700B2D9EF /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
+		180062BA20882EF100B2D9EF /* DemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
+		180062BB20882EF100B2D9EF /* DemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
+		180062BE20882F0900B2D9EF /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		180062BF20882F0900B2D9EF /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		180062C120883AC000B2D9EF /* Navigation.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Navigation.xcassets; sourceTree = "<group>"; };
+		180062C520888CAB00B2D9EF /* DiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverViewController.h; sourceTree = "<group>"; };
+		180062C620888CAB00B2D9EF /* DiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverViewController.m; sourceTree = "<group>"; };
+		180062C92088941A00B2D9EF /* BaseScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseScrollView.h; sourceTree = "<group>"; };
+		180062CA2088941A00B2D9EF /* BaseScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseScrollView.m; sourceTree = "<group>"; };
+		183ED11F2085A9BA000226A6 /* YanAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YanAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183ED1222085A9BA000226A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		183ED1232085A9BA000226A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		183ED12B2085A9BB000226A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		183ED12E2085A9BB000226A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		183ED1302085A9BB000226A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183ED1312085A9BB000226A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		183ED1372085A9BB000226A6 /* YanAPPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YanAPPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183ED13B2085A9BB000226A6 /* YanAPPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YanAPPTests.m; sourceTree = "<group>"; };
+		183ED13D2085A9BB000226A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183ED1422085A9BB000226A6 /* YanAPPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YanAPPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		183ED1462085A9BB000226A6 /* YanAPPUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YanAPPUITests.m; sourceTree = "<group>"; };
+		183ED1482085A9BB000226A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183ED1552085A9DC000226A6 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1840ACA12085AAC900E248F4 /* UtilsMarcos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMarcos.h; sourceTree = "<group>"; };
+		1840ACB82085E89D00E248F4 /* RootTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTabBarController.h; sourceTree = "<group>"; };
+		1840ACB92085E89D00E248F4 /* RootTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTabBarController.m; sourceTree = "<group>"; };
+		1840ACBC2085E8D300E248F4 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1840ACBD2085E8D300E248F4 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1840ACBF2085ED2A00E248F4 /* RootNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootNavigationController.h; sourceTree = "<group>"; };
+		1840ACC02085ED2A00E248F4 /* RootNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootNavigationController.m; sourceTree = "<group>"; };
+		188E52332085F3B7000D9BD8 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		188E52342085F3B7000D9BD8 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		188E52362085F3C6000D9BD8 /* MineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		188E52372085F3C6000D9BD8 /* MineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		188E52392085F45E000D9BD8 /* ColorMarcos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorMarcos.h; sourceTree = "<group>"; };
+		5CE84DA4306FC93EECD8059F /* Pods-YanAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YanAPP/Pods-YanAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		BE96DF4FCB65DE878128DE36 /* Pods-YanAPP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YanAPP.release.xcconfig"; path = "Pods/Target Support Files/Pods-YanAPP/Pods-YanAPP.release.xcconfig"; sourceTree = "<group>"; };
+		CC38D00934A02CACCA0FC7A0 /* libPods-YanAPP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YanAPP.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		183ED11C2085A9BA000226A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46CF72FE088646AE09019B14 /* libPods-YanAPP.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED1342085A9BB000226A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED13F2085A9BB000226A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		180062A820882D4B00B2D9EF /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				180062AB20882D6000B2D9EF /* Controller */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		180062A920882D5300B2D9EF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				180062AA20882D5A00B2D9EF /* Controller */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		180062AA20882D5A00B2D9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180062AF20882D7B00B2D9EF /* ServiceViewController.h */,
+				180062B020882D7B00B2D9EF /* ServiceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180062AB20882D6000B2D9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180062AC20882D7100B2D9EF /* FinanceViewController.h */,
+				180062AD20882D7100B2D9EF /* FinanceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180062B820882ED400B2D9EF /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				180062B920882EE400B2D9EF /* Controller */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		180062B920882EE400B2D9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180062BA20882EF100B2D9EF /* DemoViewController.h */,
+				180062BB20882EF100B2D9EF /* DemoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180062BD20882EFA00B2D9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180062BE20882F0900B2D9EF /* MessageViewController.h */,
+				180062BF20882F0900B2D9EF /* MessageViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180062C320888C8D00B2D9EF /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				180062C420888C9500B2D9EF /* Controller */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		180062C420888C9500B2D9EF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				180062C520888CAB00B2D9EF /* DiscoverViewController.h */,
+				180062C620888CAB00B2D9EF /* DiscoverViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		180062C8208893FC00B2D9EF /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				180062C92088941A00B2D9EF /* BaseScrollView.h */,
+				180062CA2088941A00B2D9EF /* BaseScrollView.m */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+		183ED1162085A9BA000226A6 = {
+			isa = PBXGroup;
+			children = (
+				183ED1212085A9BA000226A6 /* YanAPP */,
+				183ED13A2085A9BB000226A6 /* YanAPPTests */,
+				183ED1452085A9BB000226A6 /* YanAPPUITests */,
+				183ED1202085A9BA000226A6 /* Products */,
+				B6B11DBDCF5FD90C657DD9AE /* Pods */,
+				62843B21751964E6EBBF633F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		183ED1202085A9BA000226A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				183ED11F2085A9BA000226A6 /* YanAPP.app */,
+				183ED1372085A9BB000226A6 /* YanAPPTests.xctest */,
+				183ED1422085A9BB000226A6 /* YanAPPUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183ED1212085A9BA000226A6 /* YanAPP */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACA82085C99400E248F4 /* AppDelegate */,
+				1840ACA72085C97D00E248F4 /* Modules */,
+				1840ACAF2085CE1A00E248F4 /* Utils */,
+				1840ACB22085E84500E248F4 /* Root */,
+				1840ACAE2085CE1100E248F4 /* Base */,
+				1840ACA62085C96400E248F4 /* Expands */,
+				1840ACA52085C94500E248F4 /* Plugins */,
+				1840ACAD2085CD8200E248F4 /* Globals */,
+				1840ACA42085C90600E248F4 /* Define */,
+				1840ACA32085C8FB00E248F4 /* Resource */,
+				1840ACA22085C8E500E248F4 /* Supporting Files */,
+			);
+			path = YanAPP;
+			sourceTree = "<group>";
+		};
+		183ED13A2085A9BB000226A6 /* YanAPPTests */ = {
+			isa = PBXGroup;
+			children = (
+				183ED13B2085A9BB000226A6 /* YanAPPTests.m */,
+				183ED13D2085A9BB000226A6 /* Info.plist */,
+			);
+			path = YanAPPTests;
+			sourceTree = "<group>";
+		};
+		183ED1452085A9BB000226A6 /* YanAPPUITests */ = {
+			isa = PBXGroup;
+			children = (
+				183ED1462085A9BB000226A6 /* YanAPPUITests.m */,
+				183ED1482085A9BB000226A6 /* Info.plist */,
+			);
+			path = YanAPPUITests;
+			sourceTree = "<group>";
+		};
+		1840ACA22085C8E500E248F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				183ED12B2085A9BB000226A6 /* Assets.xcassets */,
+				183ED12D2085A9BB000226A6 /* LaunchScreen.storyboard */,
+				183ED1302085A9BB000226A6 /* Info.plist */,
+				183ED1312085A9BB000226A6 /* main.m */,
+				183ED1552085A9DC000226A6 /* PrefixHeader.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1840ACA32085C8FB00E248F4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				180062B220882E6A00B2D9EF /* TabBar.xcassets */,
+				180062B620882EA700B2D9EF /* Common.xcassets */,
+				180062C120883AC000B2D9EF /* Navigation.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		1840ACA42085C90600E248F4 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACA12085AAC900E248F4 /* UtilsMarcos.h */,
+				188E52392085F45E000D9BD8 /* ColorMarcos.h */,
+				180062A62087A89D00B2D9EF /* ScreenMarcos.h */,
+				180062A72087AB2F00B2D9EF /* CommonMarcos.h */,
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		1840ACA52085C94500E248F4 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		1840ACA62085C96400E248F4 /* Expands */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Expands;
+			sourceTree = "<group>";
+		};
+		1840ACA72085C97D00E248F4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				180062C320888C8D00B2D9EF /* Discover */,
+				180062B820882ED400B2D9EF /* Demo */,
+				180062A920882D5300B2D9EF /* Service */,
+				180062A820882D4B00B2D9EF /* Finance */,
+				1840ACAC2085C9F200E248F4 /* Message */,
+				1840ACAB2085C9EA00E248F4 /* Login */,
+				1840ACAA2085C9E100E248F4 /* Mine */,
+				1840ACA92085C9DB00E248F4 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1840ACA82085C99400E248F4 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				183ED1222085A9BA000226A6 /* AppDelegate.h */,
+				183ED1232085A9BA000226A6 /* AppDelegate.m */,
+				180062A32087A25C00B2D9EF /* AppDelegate+AppService.h */,
+				180062A42087A25C00B2D9EF /* AppDelegate+AppService.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1840ACA92085C9DB00E248F4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				188E52312085F379000D9BD8 /* Controller */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1840ACAA2085C9E100E248F4 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				188E52322085F380000D9BD8 /* Controller */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		1840ACAB2085C9EA00E248F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1840ACAC2085C9F200E248F4 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				180062BD20882EFA00B2D9EF /* Controller */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		1840ACAD2085CD8200E248F4 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Globals;
+			sourceTree = "<group>";
+		};
+		1840ACAE2085CE1100E248F4 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				180062C8208893FC00B2D9EF /* ScrollView */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1840ACAF2085CE1A00E248F4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1840ACB22085E84500E248F4 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACBB2085E8BE00E248F4 /* ViewController */,
+				1840ACB42085E86200E248F4 /* TabBarController */,
+				1840ACB32085E85700E248F4 /* NavigationController */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		1840ACB32085E85700E248F4 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACBF2085ED2A00E248F4 /* RootNavigationController.h */,
+				1840ACC02085ED2A00E248F4 /* RootNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		1840ACB42085E86200E248F4 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACB82085E89D00E248F4 /* RootTabBarController.h */,
+				1840ACB92085E89D00E248F4 /* RootTabBarController.m */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		1840ACBB2085E8BE00E248F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1840ACBC2085E8D300E248F4 /* RootViewController.h */,
+				1840ACBD2085E8D300E248F4 /* RootViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		188E52312085F379000D9BD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				188E52332085F3B7000D9BD8 /* HomeViewController.h */,
+				188E52342085F3B7000D9BD8 /* HomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		188E52322085F380000D9BD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				188E52362085F3C6000D9BD8 /* MineViewController.h */,
+				188E52372085F3C6000D9BD8 /* MineViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62843B21751964E6EBBF633F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC38D00934A02CACCA0FC7A0 /* libPods-YanAPP.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B6B11DBDCF5FD90C657DD9AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CE84DA4306FC93EECD8059F /* Pods-YanAPP.debug.xcconfig */,
+				BE96DF4FCB65DE878128DE36 /* Pods-YanAPP.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		183ED11E2085A9BA000226A6 /* YanAPP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183ED14B2085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPP" */;
+			buildPhases = (
+				C4311803E83222EE068698DB /* [CP] Check Pods Manifest.lock */,
+				183ED11B2085A9BA000226A6 /* Sources */,
+				183ED11C2085A9BA000226A6 /* Frameworks */,
+				183ED11D2085A9BA000226A6 /* Resources */,
+				BE97B295465B6A1C9EAE4F69 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YanAPP;
+			productName = YanAPP;
+			productReference = 183ED11F2085A9BA000226A6 /* YanAPP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		183ED1362085A9BB000226A6 /* YanAPPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183ED14E2085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPPTests" */;
+			buildPhases = (
+				183ED1332085A9BB000226A6 /* Sources */,
+				183ED1342085A9BB000226A6 /* Frameworks */,
+				183ED1352085A9BB000226A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				183ED1392085A9BB000226A6 /* PBXTargetDependency */,
+			);
+			name = YanAPPTests;
+			productName = YanAPPTests;
+			productReference = 183ED1372085A9BB000226A6 /* YanAPPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		183ED1412085A9BB000226A6 /* YanAPPUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183ED1512085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPPUITests" */;
+			buildPhases = (
+				183ED13E2085A9BB000226A6 /* Sources */,
+				183ED13F2085A9BB000226A6 /* Frameworks */,
+				183ED1402085A9BB000226A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				183ED1442085A9BB000226A6 /* PBXTargetDependency */,
+			);
+			name = YanAPPUITests;
+			productName = YanAPPUITests;
+			productReference = 183ED1422085A9BB000226A6 /* YanAPPUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		183ED1172085A9BA000226A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Yanzheng;
+				TargetAttributes = {
+					183ED11E2085A9BA000226A6 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					183ED1362085A9BB000226A6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 183ED11E2085A9BA000226A6;
+					};
+					183ED1412085A9BB000226A6 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 183ED11E2085A9BA000226A6;
+					};
+				};
+			};
+			buildConfigurationList = 183ED11A2085A9BA000226A6 /* Build configuration list for PBXProject "YanAPP" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 183ED1162085A9BA000226A6;
+			productRefGroup = 183ED1202085A9BA000226A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				183ED11E2085A9BA000226A6 /* YanAPP */,
+				183ED1362085A9BB000226A6 /* YanAPPTests */,
+				183ED1412085A9BB000226A6 /* YanAPPUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		183ED11D2085A9BA000226A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180062C220883AC000B2D9EF /* Navigation.xcassets in Resources */,
+				180062B720882EA700B2D9EF /* Common.xcassets in Resources */,
+				183ED12F2085A9BB000226A6 /* LaunchScreen.storyboard in Resources */,
+				183ED12C2085A9BB000226A6 /* Assets.xcassets in Resources */,
+				180062B320882E6A00B2D9EF /* TabBar.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED1352085A9BB000226A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED1402085A9BB000226A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE97B295465B6A1C9EAE4F69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YanAPP/Pods-YanAPP-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YanAPP/Pods-YanAPP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4311803E83222EE068698DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YanAPP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		183ED11B2085A9BA000226A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180062BC20882EF100B2D9EF /* DemoViewController.m in Sources */,
+				180062AE20882D7100B2D9EF /* FinanceViewController.m in Sources */,
+				183ED1322085A9BB000226A6 /* main.m in Sources */,
+				188E52382085F3C6000D9BD8 /* MineViewController.m in Sources */,
+				180062C720888CAB00B2D9EF /* DiscoverViewController.m in Sources */,
+				1840ACBA2085E89D00E248F4 /* RootTabBarController.m in Sources */,
+				180062CB2088941A00B2D9EF /* BaseScrollView.m in Sources */,
+				183ED1242085A9BA000226A6 /* AppDelegate.m in Sources */,
+				180062C020882F0900B2D9EF /* MessageViewController.m in Sources */,
+				180062A52087A25C00B2D9EF /* AppDelegate+AppService.m in Sources */,
+				1840ACC12085ED2A00E248F4 /* RootNavigationController.m in Sources */,
+				1840ACBE2085E8D300E248F4 /* RootViewController.m in Sources */,
+				180062B120882D7B00B2D9EF /* ServiceViewController.m in Sources */,
+				188E52352085F3B7000D9BD8 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED1332085A9BB000226A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183ED13C2085A9BB000226A6 /* YanAPPTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		183ED13E2085A9BB000226A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				183ED1472085A9BB000226A6 /* YanAPPUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		183ED1392085A9BB000226A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 183ED11E2085A9BA000226A6 /* YanAPP */;
+			targetProxy = 183ED1382085A9BB000226A6 /* PBXContainerItemProxy */;
+		};
+		183ED1442085A9BB000226A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 183ED11E2085A9BA000226A6 /* YanAPP */;
+			targetProxy = 183ED1432085A9BB000226A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		183ED12D2085A9BB000226A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183ED12E2085A9BB000226A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		183ED1492085A9BB000226A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		183ED14A2085A9BB000226A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		183ED14C2085A9BB000226A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CE84DA4306FC93EECD8059F /* Pods-YanAPP.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YanAPP/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/YanAPP/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		183ED14D2085A9BB000226A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE96DF4FCB65DE878128DE36 /* Pods-YanAPP.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/YanAPP/Supporting Files/PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/YanAPP/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		183ED14F2085A9BB000226A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YanAPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YanAPP.app/YanAPP";
+			};
+			name = Debug;
+		};
+		183ED1502085A9BB000226A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YanAPPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YanAPP.app/YanAPP";
+			};
+			name = Release;
+		};
+		183ED1522085A9BB000226A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YanAPPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YanAPP;
+			};
+			name = Debug;
+		};
+		183ED1532085A9BB000226A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YanAPPUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPPUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YanAPP;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		183ED11A2085A9BA000226A6 /* Build configuration list for PBXProject "YanAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183ED1492085A9BB000226A6 /* Debug */,
+				183ED14A2085A9BB000226A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183ED14B2085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183ED14C2085A9BB000226A6 /* Debug */,
+				183ED14D2085A9BB000226A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183ED14E2085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183ED14F2085A9BB000226A6 /* Debug */,
+				183ED1502085A9BB000226A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183ED1512085A9BB000226A6 /* Build configuration list for PBXNativeTarget "YanAPPUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183ED1522085A9BB000226A6 /* Debug */,
+				183ED1532085A9BB000226A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 183ED1172085A9BA000226A6 /* Project object */;
+}

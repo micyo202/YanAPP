@@ -1,0 +1,34 @@
+/************************************************************
+ Class    : PrefixHeader.pch
+ Describe : 全局预编译文件
+ Company  : Prient
+ Author   : Yanzheng 严正
+ Date     : 2018-04-17
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#pragma mark - 全局宏
+#import "CommonMarcos.h"
+#import "ScreenMarcos.h"
+#import "UtilsMarcos.h"
+#import "ColorMarcos.h"
+
+#pragma mark - 基础类
+
+
+#pragma mark - 第三方
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <MJRefresh.h>
+#import <YYKit.h>
+#import <UIImageView+WebCache.h>
+#import <MBProgressHUD.h>
+
+#endif /* PrefixHeader_pch */

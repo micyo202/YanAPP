@@ -1,10 +1,12 @@
-//
-//  ScreenMarcos.h
-//  YanAPP
-//
-//  Created by Apple on 2018/4/19.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : ScreenMarcos.h
+ Describe : 屏幕尺寸宏
+ Company  : Prient
+ Author   : Yanzheng 严正
+ Date     : 2018-04-19
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #ifndef ScreenMarcos_h
 #define ScreenMarcos_h

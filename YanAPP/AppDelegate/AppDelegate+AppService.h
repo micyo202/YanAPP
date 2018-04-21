@@ -1,7 +1,7 @@
 /************************************************************
  Class    : AppDelegate+AppService.h
  Describe : 应用程序主代理类扩展类，用于处理生命周期外的业务
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
  Version  : 1.0

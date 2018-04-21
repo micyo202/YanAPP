@@ -1,7 +1,7 @@
 /************************************************************
  Class    : AppDelegate.m
  Describe : 应用程序主代理类
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
  Version  : 1.0

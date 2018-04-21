@@ -1,7 +1,7 @@
 /************************************************************
  Class    : main.m
  Describe : 应用程序入口
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
  Version  : 1.0

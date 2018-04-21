@@ -1,7 +1,7 @@
 /************************************************************
  Class    : CommonMarcos.h
  Describe : 通用宏
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-19
  Version  : 1.0
@@ -13,7 +13,7 @@
 
 // 在控制台输出Log日志
 #ifdef  DEBUG
-#define DLog(FORMAT, ...) NSLog((@"Yan输出[Debug Log]%s [Line %d] " FORMAT), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define DLog(FORMAT, ...) NSLog((@"Yan [Debug Log]%s [Line %d] " FORMAT), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 #else
 #define DLog(...)
 #endif

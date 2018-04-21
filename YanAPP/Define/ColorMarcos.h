@@ -1,7 +1,7 @@
 /************************************************************
  Class    : ColorMarcos.h
  Describe : 色彩宏
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
  Version  : 1.0

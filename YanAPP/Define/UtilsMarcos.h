@@ -1,7 +1,7 @@
 /************************************************************
  Class    : ScreenMarcos.h
  Describe : 工具类宏
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-20
  Version  : 1.0

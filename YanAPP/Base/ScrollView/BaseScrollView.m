@@ -1,7 +1,7 @@
 /************************************************************
  Class    : BaseScrollView.m
  Describe : 基本的滚动视图，带边缘回弹效果
- Company  : Prient
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-19
  Version  : 1.0

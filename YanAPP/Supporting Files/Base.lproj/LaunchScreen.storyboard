@@ -25,7 +25,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 Yanzheng. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fT-di-MDg">
-                                <rect key="frame" x="0.0" y="652.5" width="375" height="14.5"/>
+                                <rect key="frame" x="51" y="652.5" width="273" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,10 +34,8 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7fT-di-MDg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FTR-Li-wXw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fT-di-MDg" secondAttribute="trailing" id="FcD-CU-lbf"/>
                             <constraint firstItem="Dey-Yh-MXg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RUj-ER-e3K"/>
                             <constraint firstItem="Dey-Yh-MXg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="pTy-Nv-LdX"/>
-                            <constraint firstItem="7fT-di-MDg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qbg-l6-MmU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7fT-di-MDg" secondAttribute="bottom" id="uKc-tn-hOH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

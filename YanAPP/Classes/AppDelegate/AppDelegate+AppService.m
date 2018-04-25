@@ -16,7 +16,7 @@
 #pragma mark - 初始化Window组件及root根视图
 - (void)initializeWindow {
     
-    UIViewController *rootViewController = [NSClassFromString(@"RootTabBarController") new];
+    UIViewController *rootViewController = [NSClassFromString(@"MainTabBarController") new];
     self.window = [[UIWindow alloc] initWithFrame:FRAME_SCREEN];
     self.window.backgroundColor = UIColor.clearColor;
     self.window.rootViewController = rootViewController;

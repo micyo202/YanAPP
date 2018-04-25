@@ -21,6 +21,7 @@
 #import "CommonMarcos.h"
 
 #pragma mark - 基础类
+#import "JsonUtil.h"
 
 #pragma mark - 扩展类
 #import "UIColor+YZ.h"
@@ -32,5 +33,6 @@
 #import <YYKit.h>
 #import <UIImageView+WebCache.h>
 #import <MBProgressHUD.h>
+#import <ReactiveObjC.h>
 
 #endif /* PrefixHeader_pch */

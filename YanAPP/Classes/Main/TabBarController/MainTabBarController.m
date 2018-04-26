@@ -1,6 +1,6 @@
 /************************************************************
- Class    : RootTabBarController.h
- Describe : 根选项卡控制器，也是整个程序的root视图
+ Class    : MainTabBarController.m
+ Describe : 主选项卡控制器，也是整个程序的root视图
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
@@ -8,7 +8,7 @@
  Declare  : Copyright © 2018 Yanzheng. All rights reserved.
  ************************************************************/
 
-#import "RootTabBarController.h"
+#import "MainTabBarController.h"
 #import "RootNavigationController.h"
 
 #define CLASS_NAME      @"className"
@@ -16,18 +16,18 @@
 #define IMAGE           @"image"
 #define SELECTED_IMAGE  @"selectedImage"
 
-@interface RootTabBarController ()
+@interface MainTabBarController ()
 
 @end
 
-@implementation RootTabBarController
+@implementation MainTabBarController
 
-SingletonM(RootTabBarController)
+SingletonM(MainTabBarController)
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    
     // 设置 TabBar 包含的所有视图
     NSArray *items = @[
                        @{

@@ -1,6 +1,6 @@
 /************************************************************
- Class    : RootTabBarController.h
- Describe : 根选项卡控制器，也是整个程序的root视图
+ Class    : MainTabBarController.h
+ Describe : 主选项卡控制器，也是整个程序的root视图
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
@@ -10,8 +10,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootTabBarController : UITabBarController
+@interface MainTabBarController : UITabBarController
 
-SingletonH(RootTabBarController)
+SingletonH(MainTabBarController)
 
 @end

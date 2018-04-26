@@ -11,6 +11,11 @@
 #ifndef CommonMarcos_h
 #define CommonMarcos_h
 
+// 强弱引用
+//强弱引用
+#define WeakSelf(type)  __weak typeof(type) weak##type = type;
+#define StrongSelf(type) __strong typeof(type) type = weak##type;
+
 // 在控制台输出Log日志
 #ifdef  DEBUG
 #define DLog(FORMAT, ...) NSLog((@"Yan [Debug Log]%s [Line %d] " FORMAT), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)

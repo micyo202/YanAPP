@@ -1,20 +1,20 @@
 /************************************************************
- Class    : RootViewController.m
- Describe : 根视图控制器，所有视图控制器必须继承于该类
- Company  : Prient
+ Class    : BaseViewController.m
+ Describe : 基础的图控制器，所有视图控制器必须继承于该类
+ Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17
  Version  : 1.0
  Declare  : Copyright © 2018 Yanzheng. All rights reserved.
  ************************************************************/
 
-#import "RootViewController.h"
+#import "BaseViewController.h"
 
-@interface RootViewController ()
+@interface BaseViewController ()
 
 @end
 
-@implementation RootViewController
+@implementation BaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,7 +26,6 @@
     [self initialize];// 初始化基本内容
     
     [self initializeNavigation];// 初始化导航栏样式
-    
 }
 
 #pragma mark - 初始化基本的参数内容
@@ -59,11 +58,12 @@
 #pragma mark - 初始化导航栏样式
 - (void)initializeNavigation {
     
-    self.navigationController.navigationBar.barTintColor = DEFAULT_BACKGROUND_COLOR;// 设置导航栏背景颜色
-    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];// 设置导航栏 itemBar 字体颜色
+    self.navigationController.navigationBar.barTintColor = DEFAULT_ORANGE_COLOR;// 设置导航栏背景颜色
+    self.navigationController.navigationBar.tintColor = UIColor.whiteColor;// 设置导航栏 itemBar 字体颜色
     self.navigationController.navigationBar.translucent = NO;// 半透明效果，默认 YES
-    //self.navigationController.navigationBar.clipsToBounds = YES;// 隐藏导航栏分割线
     //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigation_background"] forBarMetrics:UIBarMetricsDefault];// 导航栏背景图
+    //self.navigationController.navigationBar.hidden = YES;// 隐藏导航栏
+    //self.navigationController.navigationBar.clipsToBounds = YES;// 隐藏导航栏分割线
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:RgbColor(255, 255, 255, 0)]];  // 导航栏分割线颜色
     self.navigationController.navigationBar.titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor] };// 设置导航栏字体颜色
     
@@ -77,6 +77,24 @@
     [backBtn sizeToFit];
     [backBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     return [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    
+}
+
+#pragma mark - 初始化表格
+- (UITableView *)tableView {
+    
+    if(nil == _tableView){
+        _tableView = [[UITableView alloc] initWithFrame:FRAME_SCREEN style:UITableViewStylePlain];
+        _tableView.backgroundColor = DEFAULT_BACKGROUND_COLOR;
+        //_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;// 隐藏自带的分割线
+        _tableView.separatorInset = UIEdgeInsetsZero;// 设置分割线位置，UIEdgeInsetsZero：左侧右侧没有间距
+        _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];// 去除底部多余分割线
+        // 关闭默认的预估高度效果
+        _tableView.estimatedRowHeight = 0;// 行高度
+        _tableView.estimatedSectionHeaderHeight = 0;// 头视图高度
+        _tableView.estimatedSectionFooterHeight = 0;// 脚视图高度
+    }
+    return _tableView;
     
 }
 

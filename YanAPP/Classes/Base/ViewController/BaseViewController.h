@@ -9,10 +9,10 @@
  ************************************************************/
 
 #import <UIKit/UIKit.h>
-#import <RTRootNavigationController.h>
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UICollectionView *collectionView;
 

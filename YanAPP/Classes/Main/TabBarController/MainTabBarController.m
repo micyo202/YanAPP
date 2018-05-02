@@ -62,11 +62,11 @@ SingletonM(MainTabBarController)
                            }
                        ];
     
-    NSMutableArray *viewControllers = [NSMutableArray new];
+    NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
     
     // 使用 block 方法遍历集合
     [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIViewController *viewController = [NSClassFromString(obj[CLASS_NAME]) new];
+        UIViewController *viewController = [[NSClassFromString(obj[CLASS_NAME]) alloc] init];
         viewController.title = obj[TITLE];
         viewController.tabBarItem.image = [UIImage imageNamed:obj[IMAGE]];
         viewController.tabBarItem.selectedImage = [[UIImage imageNamed:obj[SELECTED_IMAGE]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

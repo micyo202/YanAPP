@@ -1,10 +1,12 @@
-//
-//  JsonUtil.h
-//  YanAPP
-//
-//  Created by Apple on 2018/4/25.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : JsonUtil.h
+ Describe : JSON对象与OC对象转换
+ Company  : Micyo
+ Author   : Yanzheng 严正
+ Date     : 2018-04-25
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import <Foundation/Foundation.h>
 

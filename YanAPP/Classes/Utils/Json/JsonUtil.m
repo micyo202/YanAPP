@@ -1,10 +1,12 @@
-//
-//  JsonUtil.m
-//  YanAPP
-//
-//  Created by Apple on 2018/4/25.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : JsonUtil.m
+ Describe : JSON对象与OC对象转换
+ Company  : Micyo
+ Author   : Yanzheng 严正
+ Date     : 2018-04-25
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import "JsonUtil.h"
 
@@ -12,12 +14,12 @@
 
 + (NSString *)JSONStringWithDictionaryOrArray:(id)dictionaryOrArray {
     
-    if (dictionaryOrArray ==nil) {
+    if (dictionaryOrArray == nil) {
         return nil;
     }
     
     NSData *data = [NSJSONSerialization dataWithJSONObject:dictionaryOrArray options:NSJSONWritingPrettyPrinted error:nil];
-    if (data ==nil) {
+    if (data == nil) {
         return nil;
     }
     
@@ -29,7 +31,7 @@
 
 + (NSData *)JSONSDataWithDictionaryOrArray:(id)dictionaryOrArray {
     
-    if (dictionaryOrArray ==nil) {
+    if (dictionaryOrArray == nil) {
         return nil;
     }
     
@@ -39,7 +41,7 @@
 
 + (id)dictionaryOrArrayWithJSONSString:(NSString *)jsonString {
     
-    if (jsonString ==nil) {
+    if (jsonString == nil) {
         return nil;
     }
     
@@ -51,7 +53,7 @@
 
 + (id)dictionaryOrArrayWithJSONSData:(NSData *)jsonData {
     
-    if (jsonData ==nil) {
+    if (jsonData == nil) {
         return nil;
     }
     
@@ -61,7 +63,7 @@
 
 + (NSString *)stringWithForamtUTF8FromData:(NSData *)data {
     
-    if (data ==nil) {
+    if (data == nil) {
         return nil;
     }
     
@@ -73,7 +75,7 @@
 
 + (NSData *)dataWithJSONString:(NSString *)str {
     
-    if (str ==nil) {
+    if (str == nil) {
         return nil;
     }
     

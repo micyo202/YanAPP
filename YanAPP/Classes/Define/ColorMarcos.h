@@ -14,6 +14,7 @@
 #pragma mark - 颜色方法
 #define RgbColor(r, g, b, a)            [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:a]
 #define HexColor(hex, a)                [UIColor colorWithHexString:hex alpha:a]
+#define RandomColor                     RgbColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
 #pragma mark - 基本颜色
 #define DEFAULT_BACKGROUND_COLOR        RgbColor(239.0, 239.0, 244.0, 1.0f)

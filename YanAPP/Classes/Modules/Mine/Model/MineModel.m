@@ -15,7 +15,7 @@
 #pragma mark 初始化方法
 - (instancetype) init{
     if (self = [super init]) {
-        self.alignment = MineModelItemAlignmentLeft;
+        self.alignment = MineModelItemAlignmentRight;
         
         self.bgColor = [UIColor whiteColor];
         self.titleColor = [UIColor blackColor];

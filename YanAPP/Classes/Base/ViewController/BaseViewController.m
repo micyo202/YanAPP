@@ -122,7 +122,7 @@
 - (UITableView *)tableView {
     
     if(nil == _tableView){
-        _tableView = [[UITableView alloc] initWithFrame:FRAME_SCREEN style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN, HEIGHT_SCREEN - HEIGHT_TOP) style:UITableViewStylePlain];
         _tableView.backgroundColor = DEFAULT_BACKGROUND_COLOR;
         //_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;// 隐藏自带的分割线
         _tableView.separatorInset = UIEdgeInsetsZero;// 设置分割线位置，UIEdgeInsetsZero：左侧右侧没有间距
@@ -132,30 +132,62 @@
         _tableView.estimatedSectionHeaderHeight = 0;// 头视图高度
         _tableView.estimatedSectionFooterHeight = 0;// 脚视图高度
         _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentAutomatic;
-        _tableView.contentInset = UIEdgeInsetsMake(0, 0, HEIGHT_TAB_BAR, 0);
+        //_tableView.contentSize = SIZE_SCREEN; // 视图可滚动的区域
+        //_tableView.contentOffset = CGPointZero;   // 显示区域顶点相对于frame的偏移量
+        //_tableView.contentInset = UIEdgeInsetsMake(0, 0, HEIGHT_TAB_BAR, 0); // 内容区域域偏移位置
+        
         // 顶部刷新
-        MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
+        MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshing)];
         header.automaticallyChangeAlpha = YES;
         header.lastUpdatedTimeLabel.hidden = YES;
         //header.stateLabel.hidden = YES;
         _tableView.mj_header = header;
 
         // 底部刷新
-        MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefresh)];
+        MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefreshing)];
         _tableView.mj_footer = footer;
         
     }
+    
     return _tableView;
     
 }
 
+#pragma mark - 初始化CollectionView
+- (UICollectionView *)collectionView {
+    
+    if(nil == _collectionView){
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        //flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;// 确定是水平滚动，还是垂直滚动
+        //flowLayout.minimumLineSpacing = 0;
+        //flowLayout.minimumInteritemSpacing = 0;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, WIDTH_SCREEN , HEIGHT_SCREEN - HEIGHT_TOP) collectionViewLayout:flowLayout];
+        _collectionView.backgroundColor = DEFAULT_BACKGROUND_COLOR;
+        
+        // 顶部刷新
+        MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefreshing)];
+        header.automaticallyChangeAlpha = YES;
+        header.lastUpdatedTimeLabel.hidden = YES;
+        //header.stateLabel.hidden = YES;
+        _collectionView.mj_header = header;
+        
+        // 底部刷新
+        MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(footerRefreshing)];
+        _collectionView.mj_footer = footer;
+        
+    }
+    
+    return _collectionView;
+    
+}
+
 #pragma mark - 顶部刷新方法
-- (void)headerRefresh {
+- (void)headerRefreshing {
     //顶部刷新方法，下拉刷新（需子类重写）
 }
 
 #pragma mark - 底部刷新方法
-- (void)footerRefresh {
+- (void)footerRefreshing {
     //底部刷新方法，上拉加载更多（需子类重写）
 }
 

@@ -12,4 +12,6 @@
 
 @interface MineViewController : BaseViewController
 
+@property (nonatomic, strong) NSMutableArray *data;
+
 @end

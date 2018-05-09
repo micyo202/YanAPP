@@ -11,11 +11,8 @@
 #import "MineViewController.h"
 #import "MineTableViewCell.h"
 #import "MineTableViewHeaderFooterView.h"
-#import "MineManager.h"
 
-@interface MineViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (nonatomic, strong) NSMutableArray *data;
+@interface MineViewController () <UITableViewDelegate, UITableViewDataSource, MineTableViewCellDelegate>
 
 @end
 
@@ -41,10 +38,6 @@ static NSString * const headerFooterViewReuseIdentifier = @"mineHeaderFooterView
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     
-    _data = [[MineManager sharedMineManager] mineData];
-    
-    DLog(@"%lu", (unsigned long)_data.count);
-    
 }
 
 #pragma mark - <UITableViewDataSource>数据源方法
@@ -64,6 +57,7 @@ static NSString * const headerFooterViewReuseIdentifier = @"mineHeaderFooterView
     MineModelGroup *group = [_data objectAtIndex:indexPath.section];   // 获得组
     MineModelItem *item = [group itemAtIndex:indexPath.row];   // 获得组中的元素
     MineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.delegate = self;
     [cell setItem:item];
     
     // cell分割线

@@ -17,6 +17,14 @@ typedef NS_ENUM(NSInteger, CellLineStyle) {
     CellLineStyleNone,
 };
 
+@protocol MineTableViewCellDelegate <NSObject>
+
+@optional
+- (void)mineTableViewCellButtonAction:(UIButton *)sender;   // button点击代理方法
+- (void)mineTableViewCellSwitchAction:(UISwitch *)sender;   // switch开关变更方法
+
+@end
+
 @interface MineTableViewCell : UITableViewCell
 
 @property (nonatomic, assign) CellLineStyle bottomLineStyle;    // 底部线条样式
@@ -26,5 +34,7 @@ typedef NS_ENUM(NSInteger, CellLineStyle) {
 @property (nonatomic, strong) MineModelItem *item;
 
 + (CGFloat)getHeightForText:(MineModelItem *)item;
+
+@property (nonatomic, weak) id<MineTableViewCellDelegate> delegate;
 
 @end

@@ -236,6 +236,7 @@
             [button removeFromSuperview];
         }
     }
+    
     // 设置样式
     [self setBackgroundColor:item.bgColor];
     [self setAccessoryType:item.accessoryType];
@@ -312,7 +313,9 @@
 - (UISwitch *) cSwitch{
     if (_cSwitch == nil) {
         _cSwitch = [[UISwitch alloc] init];
-        //[_cSwitch addTarget:self action:@selector(cSwitchChanged:) forControlEvents:UIControlEventValueChanged];
+        
+        // 注册绑定开关时间
+        [_cSwitch addTarget:self action:@selector(switchAction:) forControlEvents:UIControlEventValueChanged];
     }
     return _cSwitch;
 }
@@ -327,7 +330,7 @@
         [_cButton.titleLabel setFont:[UIFont systemFontOfSize:16.0f]];
         
         // 注册按钮点击事件
-        //[self.cButton addTarget:self action:@selector(cButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.cButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cButton;
 }
@@ -382,6 +385,21 @@
         [self.bottomLine setHidden:NO];
     }else if (style == CellLineStyleNone) {
         [self.bottomLine setHidden:YES];
+    }
+}
+
+#pragma mark - 组件响应事件
+- (void)switchAction:(UISwitch *)sender{
+    // 如果协议响应了mineTableViewCellSwitchAction方法
+    if([_delegate respondsToSelector:@selector(mineTableViewCellSwitchAction:)]){
+        [_delegate mineTableViewCellSwitchAction:sender]; // 通知执行协议方法
+    }
+}
+
+- (void)buttonAction:(UIButton *)sender{
+    // 如果协议响应了mineTableViewCellButtonAction方法
+    if([_delegate respondsToSelector:@selector(mineTableViewCellButtonAction:)]){
+        [_delegate mineTableViewCellButtonAction:sender]; // 通知执行协议方法
     }
 }
 

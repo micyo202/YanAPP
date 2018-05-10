@@ -28,7 +28,7 @@
         self.rightImageHeightOfCell = 0.72f;
         self.middleImageHeightOfCell = 0.35f;
     }
-    return self;
+    return self; 
 }
 
 #pragma mark 创建item的各种方法
@@ -91,7 +91,7 @@
 @implementation MineModelGroup
 
 #pragma mark 初始化一个组
-- (instancetype) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(MineModelItem *)firstObj, ...{
+- (MineModelGroup *) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(MineModelItem *)firstObj, ...{
     if (self = [super init]) {
         _headerTitle = headerTitle;
         _footerTitle = footerTitle;

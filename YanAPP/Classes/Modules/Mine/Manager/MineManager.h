@@ -14,7 +14,11 @@
 
 SingletonH(MineManager)
 
-// 我的数据（第一级）
-- (NSMutableArray *)mineData;
+// 我的模块基本数据（第一级）
+- (NSMutableArray *)infoData;
+
+- (NSMutableArray *)settingData;
+
+- (NSMutableArray *)generalData;
 
 @end

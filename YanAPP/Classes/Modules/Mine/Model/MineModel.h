@@ -92,7 +92,7 @@ typedef NS_ENUM(NSInteger, MineModelItemType) {
 @property (nonatomic, assign, readonly) NSUInteger itemsCount;
 
 /************************ 类方法 ************************/
-- (instancetype) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(MineModelItem *)firstObj, ...;
+- (MineModelGroup *) initWithHeaderTitle:(NSString *)headerTitle footerTitle:(NSString *)footerTitle settingItems:(MineModelItem *)firstObj, ...;
 - (MineModelItem *) itemAtIndex:(NSUInteger)index;
 
 @end

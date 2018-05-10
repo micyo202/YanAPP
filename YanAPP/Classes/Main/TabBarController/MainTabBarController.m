@@ -55,7 +55,7 @@ SingletonM(MainTabBarController)
                            SELECTED_IMAGE   :   @"tabbar_serviceHL"
                            },
                        @{
-                           CLASS_NAME       :   @"MineViewController",
+                           CLASS_NAME       :   @"InfoViewController",
                            TITLE            :   @"我的",
                            IMAGE            :   @"tabbar_mine",
                            SELECTED_IMAGE   :   @"tabbar_mineHL"

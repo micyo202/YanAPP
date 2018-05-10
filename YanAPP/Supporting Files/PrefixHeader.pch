@@ -25,6 +25,8 @@
 
 #pragma mark - 扩展类
 #import "UIColor+YZ.h"
+#import "UIView+YZ.h"
+#import "MBProgressHUD+YZ.h"
 
 #pragma mark - 第三方
 #import <AFNetworking.h>
@@ -32,7 +34,10 @@
 #import <MJRefresh.h>
 #import <YYKit.h>
 #import <UIImageView+WebCache.h>
-#import <MBProgressHUD.h>
+//#import <MBProgressHUD.h>
 #import <ReactiveObjC.h>
+#import <SDCycleScrollView.h>
+#import <CustomIOSAlertView.h>
+#import <UIAlertController+Blocks.h>
 
 #endif /* PrefixHeader_pch */

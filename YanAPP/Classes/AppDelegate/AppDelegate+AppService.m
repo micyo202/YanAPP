@@ -9,6 +9,7 @@
  ************************************************************/
 
 #import "AppDelegate+AppService.h"
+#import <WRNavigationBar.h>
 #import <AvoidCrash.h>
 
 @implementation AppDelegate (AppService)
@@ -16,7 +17,7 @@
 #pragma mark - 初始化Window组件及root根视图
 - (void)initializeWindow {
     
-    UIViewController *rootViewController = [NSClassFromString(@"MainTabBarController") new];
+    UIViewController *rootViewController = [[NSClassFromString(@"MainTabBarController") alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:FRAME_SCREEN];
     self.window.backgroundColor = UIColor.clearColor;
     self.window.rootViewController = rootViewController;
@@ -34,6 +35,29 @@
     // 设置顶部状态栏字体为白色
     APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
     
+}
+
+#pragma mark - 初始化导航栏
+- (void)initializeNavigation {
+    // 设置是 广泛使用WRNavigationBar，还是局部使用WRNavigationBar，目前默认是广泛使用
+    [WRNavigationBar wr_widely];
+    // WRNavigationBar 不会对 blackList 中的控制器有影响
+    /*
+    [WRNavigationBar wr_setBlacklist:@[@"SpecialController",
+                                       @"TZPhotoPickerController",
+                                       @"TZGifPhotoPreviewController"]];
+    */
+    
+    // 设置导航栏默认的背景颜色
+    [WRNavigationBar wr_setDefaultNavBarBarTintColor:DEFAULT_RED_COLOR];
+    // 设置导航栏所有按钮的默认颜色
+    [WRNavigationBar wr_setDefaultNavBarTintColor:[UIColor whiteColor]];
+    // 设置导航栏标题默认颜色
+    [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
+    // 统一设置状态栏样式
+    //[WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
+    [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
 }
 
 #pragma mark - 避免应用程序崩溃，在Crash时收集日志

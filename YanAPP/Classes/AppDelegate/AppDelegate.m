@@ -23,6 +23,7 @@
     
     [self initializeWindow];// 初始化window
     [self initializeStatusBar];// 初始化状态栏样式
+    [self initializeNavigation];// 初始化导航栏样式
     [self initializeAvoidCrash];// 初始化应用程序crash收集日志
     
     return YES;

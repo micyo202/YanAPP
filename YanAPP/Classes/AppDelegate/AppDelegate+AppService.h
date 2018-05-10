@@ -18,6 +18,9 @@
 //初始化顶部状态栏样式
 - (void)initializeStatusBar;
 
+//初始化导航栏样式
+- (void)initializeNavigation;
+
 // 避免应用程序崩溃，在Crash时收集日志
 - (void)initializeAvoidCrash;
 

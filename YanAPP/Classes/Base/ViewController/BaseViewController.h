@@ -12,6 +12,8 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UICollectionView *collectionView;

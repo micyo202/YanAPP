@@ -8,9 +8,9 @@
  Declare  : Copyright © 2018 Yanzheng. All rights reserved.
  ************************************************************/
 
-#import <UIKit/UIKit.h>
+#import <CYLTabBarController.h>
 
-@interface MainTabBarController : UITabBarController
+@interface MainTabBarController : CYLTabBarController
 
 SingletonH(MainTabBarController)
 

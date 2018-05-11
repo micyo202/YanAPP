@@ -11,11 +11,6 @@
 #import "MainTabBarController.h"
 #import "RootNavigationController.h"
 
-#define CLASS_NAME      @"className"
-#define TITLE           @"title"
-#define IMAGE           @"image"
-#define SELECTED_IMAGE  @"selectedImage"
-
 @interface MainTabBarController ()
 
 @end
@@ -28,58 +23,69 @@ SingletonM(MainTabBarController)
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.tabBar.tintColor = UIColor.blackColor;// 设置选中字体颜色
+    
+    // 初始化 TabBar 视图（必须先添加属性，在添加控制器，注意顺序）
+    [self addTabBarItemsAttributes];
+    [self addViewControllers];
+    
+}
+
+#pragma mark - 添加 TabBar 属性
+- (void)addTabBarItemsAttributes {
+    NSArray *tabBarItemsAttributes = @[
+                                       @{
+                                           CYLTabBarItemTitle           :   @"首页",
+                                           CYLTabBarItemImage           :   @"tabbar_home",
+                                           CYLTabBarItemSelectedImage   :   @"tabbar_homeHL"
+                                           },
+                                       @{
+                                           CYLTabBarItemTitle           :   @"位置",
+                                           CYLTabBarItemImage           :   @"tabbar_location",
+                                           CYLTabBarItemSelectedImage   :   @"tabbar_locationHL"
+                                           },
+                                       @{
+                                           CYLTabBarItemTitle           :   @"添加",
+                                           CYLTabBarItemImage           :   @"tabbar_add",
+                                           CYLTabBarItemSelectedImage   :   @"tabbar_addHL"
+                                           },
+                                       @{
+                                           CYLTabBarItemTitle           :   @"消息",
+                                           CYLTabBarItemImage           :   @"tabbar_message",
+                                           CYLTabBarItemSelectedImage   :   @"tabbar_messageHL"
+                                           },
+                                       @{
+                                           CYLTabBarItemTitle           :   @"我的",
+                                           CYLTabBarItemImage           :   @"tabbar_mine",
+                                           CYLTabBarItemSelectedImage   :   @"tabbar_mineHL"
+                                           }
+                                       ];
+    
+    self.tabBarItemsAttributes = tabBarItemsAttributes;
+}
+
+#pragma mark - 添加 TabBar 子视图控制器
+- (void)addViewControllers {
+    
     // 设置 TabBar 包含的所有视图
-    NSArray *items = @[
-                       @{
-                           CLASS_NAME       :   @"HomeViewController",
-                           TITLE            :   @"首页",
-                           IMAGE            :   @"tabbar_home",
-                           SELECTED_IMAGE   :   @"tabbar_homeHL"
-                           },
-                       @{
-                           CLASS_NAME       :   @"FinanceViewController",
-                           TITLE            :   @"理财",
-                           IMAGE            :   @"tabbar_finance",
-                           SELECTED_IMAGE   :   @"tabbar_financeHL"
-                           },
-                       @{
-                           CLASS_NAME       :   @"DiscoverViewController",
-                           TITLE            :   @"发现",
-                           IMAGE            :   @"tabbar_discover",
-                           SELECTED_IMAGE   :   @"tabbar_discoverHL"
-                           },
-                       @{
-                           CLASS_NAME       :   @"ServiceViewController",
-                           TITLE            :   @"服务",
-                           IMAGE            :   @"tabbar_service",
-                           SELECTED_IMAGE   :   @"tabbar_serviceHL"
-                           },
-                       @{
-                           CLASS_NAME       :   @"InfoViewController",
-                           TITLE            :   @"我的",
-                           IMAGE            :   @"tabbar_mine",
-                           SELECTED_IMAGE   :   @"tabbar_mineHL"
-                           }
+    NSArray *controllers = @[
+                       @"HomeViewController",
+                       @"FinanceViewController",
+                       @"DiscoverViewController",
+                       @"ServiceViewController",
+                       @"InfoViewController"
                        ];
     
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
     
     // 使用 block 方法遍历集合
-    [items enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        UIViewController *viewController = [[NSClassFromString(obj[CLASS_NAME]) alloc] init];
-        viewController.title = obj[TITLE];
-        viewController.tabBarItem.image = [UIImage imageNamed:obj[IMAGE]];
-        viewController.tabBarItem.selectedImage = [[UIImage imageNamed:obj[SELECTED_IMAGE]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        
+    [controllers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIViewController *viewController = [[NSClassFromString(obj) alloc] init];
         RootNavigationController *rootNavigationController = [[RootNavigationController alloc] initWithRootViewController:viewController];
-        
         [viewControllers addObject:rootNavigationController];
     }];
     
-    self.viewControllers = viewControllers;// 设置 tabBar 集合
-    UITabBarItem *item = [UITabBarItem appearance];// 获取 tabBarItem 的外观
-    [item setTitleTextAttributes:@{NSForegroundColorAttributeName : DEFAULT_RED_COLOR} forState:UIControlStateSelected];// 设置tabBar选中颜色
-    
+    self.viewControllers = viewControllers;
 }
 
 - (void)didReceiveMemoryWarning {

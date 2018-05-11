@@ -21,6 +21,9 @@
 //初始化导航栏样式
 - (void)initializeNavigation;
 
+//显示FPS监测
+- (void)showFPS;
+
 // 避免应用程序崩溃，在Crash时收集日志
 - (void)initializeAvoidCrash;
 

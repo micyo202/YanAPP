@@ -8,8 +8,8 @@
  Declare  : Copyright © 2018 Yanzheng. All rights reserved.
  ************************************************************/
 
-#import "RTRootNavigationController.h"
+#import <UIKit/UIKit.h>
 
-@interface RootNavigationController : RTRootNavigationController
+@interface RootNavigationController : UINavigationController
 
 @end

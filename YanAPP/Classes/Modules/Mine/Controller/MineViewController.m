@@ -25,7 +25,7 @@ static NSString * const headerFooterViewReuseIdentifier = @"mineHeaderFooterView
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"我的";
+    self.navigationItem.title = @"我的";
     
     self.navigationController.navigationBar.barTintColor = DEFAULT_ORANGE_COLOR;
     

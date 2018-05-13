@@ -9,7 +9,6 @@
  ************************************************************/
 
 #import "BaseViewController.h"
-#import <WRNavigationBar.h>
 
 @interface BaseViewController ()
 

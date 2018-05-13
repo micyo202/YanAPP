@@ -9,6 +9,7 @@
  ************************************************************/
 
 #import <UIKit/UIKit.h>
+#import <WRNavigationBar.h>
 
 @interface BaseViewController : UIViewController
 

@@ -1,6 +1,6 @@
 /************************************************************
  Class    : InfoViewController.m
- Describe : 我的模块第一级基本信息列表展示
+ Describe : 我的模块第一级基本信息列表视图控制器
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-05-03

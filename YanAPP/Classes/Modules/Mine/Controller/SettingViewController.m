@@ -1,6 +1,6 @@
 /************************************************************
  Class    : SettingViewController.m
- Describe : 设置模块控制器
+ Describe : 设置模块视图控制器
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-05-07

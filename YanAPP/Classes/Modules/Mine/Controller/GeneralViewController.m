@@ -1,6 +1,6 @@
 /************************************************************
  Class    : GeneralViewController.m
- Describe : 各种样式列表
+ Describe : 通用各种样式列表案例
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-05-09

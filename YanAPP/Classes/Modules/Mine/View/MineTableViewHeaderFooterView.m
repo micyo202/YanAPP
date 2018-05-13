@@ -1,6 +1,6 @@
 /************************************************************
  Class    : MineTableViewHeaderFooterView.m
- Describe : 我的模块头部底部视图
+ Describe : 我的模块头部底部视图（头、底文字说明）
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-05-02

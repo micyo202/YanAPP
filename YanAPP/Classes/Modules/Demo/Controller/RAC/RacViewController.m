@@ -1,10 +1,12 @@
-//
-//  RacViewController.m
-//  YanAPP
-//
-//  Created by Apple on 2018/4/28.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : RacViewController.m
+ Describe : RAC使用示例
+ Company  : Micyo
+ Author   : Yanzheng 严正
+ Date     : 2018-04-28
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import "RacViewController.h"
 
@@ -20,9 +22,11 @@
     
     self.title = @"RAC-示例";
     
-    UILabel *label = [UILabel new];
+    UILabel *label = [[UILabel alloc] init];
     label.text = @"使用RAC进行替换KVO监听输入框变化情况：";
     [self.view addSubview:label];
+    
+    label.right = 10;
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
@@ -30,7 +34,7 @@
         make.height.mas_equalTo(32);
     }];
     
-    UITextField *textField = [UITextField new];
+    UITextField *textField = [[UITextField alloc] init];
     textField.backgroundColor = UIColor.blackColor;
     textField.textColor = UIColor.whiteColor;
     [self.view addSubview:textField];

@@ -1,6 +1,6 @@
 /************************************************************
  Class    : RootNavigationController.h
- Describe : 根导航栏控制器，继承于 RTRootNavigationController
+ Describe : 根导航栏控制器
  Company  : Micyo
  Author   : Yanzheng 严正
  Date     : 2018-04-17

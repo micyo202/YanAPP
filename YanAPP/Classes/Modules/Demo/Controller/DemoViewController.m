@@ -9,8 +9,11 @@
  ************************************************************/
 
 #import "DemoViewController.h"
+#import "BaseWebViewController.h"
+#import "DemoTableViewCell.h"
 
 static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
+static NSString *const cellReuseIdentifier1 = @"cellReuseIdentifier1";
 
 @interface DemoViewController () <UITableViewDelegate, UITableViewDataSource, CustomIOSAlertViewDelegate>
 
@@ -29,12 +32,13 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     _data = [[NSMutableArray alloc] init];
     [_data addObjectsFromArray:@[@"AvoidCrash-防止闪退", @"TableView-集合列表", @"CollectionView-集合列表", @"AFN-请求", @"RAC-示例", @"YYKit-组件", @"SDCycleScrollView-轮播图", @"UIAlertController+Blocks-弹框Alert", @"UIAlertController+Blocks-底部Sheet", @"CustomIOSAlertView-自定义弹框视图", @"MBProgressHUD-示例", @"WebView-示例",  @"导航栏Style-示例", @"Others-其他"]];
     
-    [self.view addSubview:self.tableView];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
+    [self.tableView registerClass:[DemoTableViewCell class] forCellReuseIdentifier:cellReuseIdentifier1];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.mj_header.hidden = YES;
     self.tableView.mj_footer.hidden = YES;
+    [self.view addSubview:self.tableView];
     
 }
 
@@ -47,9 +51,14 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
-    cell.textLabel.text = [_data objectAtIndex:indexPath.row];
-    return cell;
+    if(1 == indexPath.row){
+        DemoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier1];
+        return cell;
+    }else{
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellReuseIdentifier];
+        cell.textLabel.text = [_data objectAtIndex:indexPath.row];
+        return cell;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -128,7 +137,12 @@ static NSString *const cellReuseIdentifier = @"cellReuseIdentifier";
     } else if([cell.textLabel.text isEqualToString:@"MBProgressHUD-示例"]){
         [self.navigationController pushViewController:[[NSClassFromString(@"HudViewController") alloc] init] animated:YES];
     } else if([cell.textLabel.text isEqualToString:@"WebView-示例"]){
-        [self.navigationController pushViewController:[[NSClassFromString(@"WebViewController") alloc] init] animated:YES];
+        //[self.navigationController pushViewController:[[NSClassFromString(@"WebViewController") alloc] init] animated:YES];
+        BaseWebViewController *webVC = [[BaseWebViewController alloc] initWithUrl:@"http://www.hao123.com"];
+        webVC.title = @"WebView";
+        webVC.isShowCloseItem = YES;
+        webVC.progressViewColor = DEFAULT_GREEN_COLOR;
+        [self.navigationController pushViewController:webVC animated:YES];
     } else if([cell.textLabel.text isEqualToString:@"导航栏Style-示例"]){
         [self.navigationController pushViewController:[[NSClassFromString(@"NavigationStyleViewController") alloc] init] animated:YES];
     } else {

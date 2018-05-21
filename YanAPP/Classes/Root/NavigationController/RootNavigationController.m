@@ -10,7 +10,7 @@
 
 #import "RootNavigationController.h"
 
-@interface RootNavigationController ()
+@interface RootNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -19,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = UIColor.whiteColor;
+    
+    //默认开启系统右划返回
+    //self.interactivePopGestureRecognizer.enabled = YES;
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 #pragma mark - 重写pushViewController:方法

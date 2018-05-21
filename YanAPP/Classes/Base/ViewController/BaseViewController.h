@@ -10,12 +10,12 @@
 
 #import <UIKit/UIKit.h>
 #import <WRNavigationBar.h>
+#import "AppDelegate.h"
+#import "AppDelegate+AppService.h"
 
 @interface BaseViewController : UIViewController
 
-@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;  // 状态栏颜色
-@property (nonatomic, assign) BOOL isHiddenNavigationBar;   // 是否隐藏导航栏
-//@property (nonatomic, assign) BOOL isShowLeftItem;    // 是否显示导航栏左侧自定义Item按钮
+@property (nonatomic, assign) BOOL isWhiteNavigationBar;    // 导航栏是否为白色
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UITableView *tableView;

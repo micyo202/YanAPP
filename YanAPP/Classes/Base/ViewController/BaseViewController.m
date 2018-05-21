@@ -20,14 +20,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // 设置顶部状态栏默认样式为白色
-    _statusBarStyle = UIStatusBarStyleLightContent;
-    // 是否隐藏导航栏（默认：NO不隐藏）
-    _isHiddenNavigationBar = NO;
-    // 设置导航栏左侧Item返回按钮
-    //self.isShowLeftItem = YES;
-    // 设置根视图基本的背景色
+    // 设置视图的背景色
     self.view.backgroundColor = DEFAULT_BACKGROUND_COLOR;
+    
 }
 
 #pragma mark - 初始化基本的参数内容
@@ -183,40 +178,15 @@
     //底部刷新方法，上拉加载更多（需子类重写）
 }
 
-#pragma mark - 当导航栏为白色时设置状态栏
-- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
-    _statusBarStyle = statusBarStyle;
-    if(_statusBarStyle == UIStatusBarStyleDefault){
-        [self wr_setNavBarBarTintColor:UIColor.whiteColor];//设置导航栏背景颜色
-        [self wr_setNavBarTitleColor:UIColor.blackColor];//设置标题颜色
-        [self wr_setNavBarTintColor:UIColor.blackColor];// 设置导航栏item颜色
-        [self wr_setNavBarShadowImageHidden:NO];//显示分割线
-        //self.isShowLeftItem = YES;
+#pragma mark - 设置导航栏为白色
+- (void)setIsWhiteNavigationBar:(BOOL)isWhiteNavigationBar {
+    if(isWhiteNavigationBar){
+        [self wr_setStatusBarStyle:UIStatusBarStyleDefault];
+        [self wr_setNavBarBarTintColor:UIColor.whiteColor];
+        [self wr_setNavBarTintColor:HexColor(@"#1B7BF7", 1.f)];
+        [self wr_setNavBarTitleColor:UIColor.blackColor];
+        [self wr_setNavBarShadowImageHidden:NO];
     }
-}
-
-#pragma mark - 视图即将显示方法
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    // 更新状态栏样式
-    APPLICATION.statusBarStyle = _statusBarStyle;
-    // 隐藏导航栏
-    self.navigationController.navigationBar.hidden = _isHiddenNavigationBar;
-    
-}
-
-#pragma mark - 视图即将销毁方法
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    // 更新状态栏样式
-    if(_statusBarStyle == UIStatusBarStyleDefault)
-        APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
-    // 隐藏导航栏
-    if(_isHiddenNavigationBar)
-        self.navigationController.navigationBar.hidden = !_isHiddenNavigationBar;
-    
 }
 
 #pragma mark - 是否显示导航栏左侧返回Item按钮（默认显示）

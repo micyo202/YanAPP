@@ -36,7 +36,7 @@
     // 设置顶部状态栏字体为黑色（默认）
     //APPLICATION.statusBarStyle = UIStatusBarStyleDefault;
     // 设置顶部状态栏字体为白色
-    APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
+    //APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
     
 }
 
@@ -59,7 +59,7 @@
     // 设置导航栏标题默认颜色
     [WRNavigationBar wr_setDefaultNavBarTitleColor:[UIColor whiteColor]];
     // 统一设置状态栏样式
-    //[WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
+    [WRNavigationBar wr_setDefaultStatusBarStyle:UIStatusBarStyleLightContent];
     // 如果需要设置导航栏底部分割线隐藏，可以在这里统一设置
     [WRNavigationBar wr_setDefaultNavBarShadowImageHidden:YES];
 }

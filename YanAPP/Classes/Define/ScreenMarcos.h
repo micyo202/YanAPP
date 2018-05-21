@@ -20,4 +20,7 @@
 #define HEIGHT_TAB_BAR          (UIApplication.sharedApplication.statusBarFrame.size.height > 20 ? 83 : 49)
 #define HEIGHT_TOP              (HEIGTH_STATUS_BAR + HEIGHT_NAVIGATION_BAR)
 
+// 判断设备型号
+#define iPhoneX                 (WIDTH_SCREEN == 375.f && HEIGHT_SCREEN == 812.f)
+
 #endif /* ScreenMarcos_h */

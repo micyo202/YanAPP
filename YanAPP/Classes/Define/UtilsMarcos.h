@@ -15,4 +15,9 @@
 #define DELEGATE        UIApplication.sharedApplication.delegate
 #define WINDOW          UIApplication.sharedApplication.delegate.window
 
+#define InfoDictionary  NSBundle.mainBundle.infoDictionary
+#define AppName         [InfoDictionary objectForKey:@"CFBundleDisplayName"]
+#define AppVersion      [InfoDictionary objectForKey:@"CFBundleShortVersionString"]
+#define AppBuildVersion [InfoDictionary objectForKey:@"CFBundleVersion"]
+
 #endif /* UtilsMarcos_h */

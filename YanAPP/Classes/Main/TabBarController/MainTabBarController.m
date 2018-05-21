@@ -45,11 +45,6 @@ SingletonM(MainTabBarController)
                                            CYLTabBarItemSelectedImage   :   @"tabbar_locationHL"
                                            },
                                        @{
-                                           CYLTabBarItemTitle           :   @"添加",
-                                           CYLTabBarItemImage           :   @"tabbar_add",
-                                           CYLTabBarItemSelectedImage   :   @"tabbar_addHL"
-                                           },
-                                       @{
                                            CYLTabBarItemTitle           :   @"消息",
                                            CYLTabBarItemImage           :   @"tabbar_message",
                                            CYLTabBarItemSelectedImage   :   @"tabbar_messageHL"
@@ -69,12 +64,11 @@ SingletonM(MainTabBarController)
     
     // 设置 TabBar 包含的所有视图
     NSArray *controllers = @[
-                       @"HomeViewController",
-                       @"FinanceViewController",
-                       @"DiscoverViewController",
-                       @"ServiceViewController",
-                       @"InfoViewController"
-                       ];
+                             @"HomeViewController",
+                             @"LocationViewController",
+                             @"MessageViewController",
+                             @"InfoViewController"
+                             ];
     
     NSMutableArray *viewControllers = [[NSMutableArray alloc] init];
     

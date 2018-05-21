@@ -13,10 +13,37 @@
 
 @interface BaseViewController : UIViewController
 
-@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+@property (nonatomic, assign) UIStatusBarStyle statusBarStyle;  // 状态栏颜色
+@property (nonatomic, assign) BOOL isHiddenNavigationBar;   // 是否隐藏导航栏
+//@property (nonatomic, assign) BOOL isShowLeftItem;    // 是否显示导航栏左侧自定义Item按钮
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UICollectionView *collectionView;
+
+/**
+ * 导航栏添加文本按钮（自定义导航栏按钮）
+ *
+ * @param titles 文本数组
+ * @param isLeft 是否是左边 非左即右
+ * @param target 目标
+ * @param action 点击方法
+ * @param tags tags数组 回调区分用
+ */
+- (void)addNavigationItemWithTitles:(NSArray *)titles isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags;
+
+/**
+ * 导航栏添加图片按钮（自定义导航栏按钮）
+ *
+ * @param imageNames 图标数组
+ * @param isLeft 是否是左边 非左即右
+ * @param target 目标
+ * @param action 点击方法
+ * @param tags tags数组 回调区分用
+ */
+- (void)addNavigationItemWithImageNames:(NSArray *)imageNames isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags;
+
+// 返回按钮点击方法
+- (void)backBtnClicked;
 
 @end

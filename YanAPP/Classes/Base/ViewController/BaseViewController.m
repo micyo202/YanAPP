@@ -21,11 +21,13 @@
     // Do any additional setup after loading the view.
     
     // 设置顶部状态栏默认样式为白色
-    self.statusBarStyle = UIStatusBarStyleLightContent;
-    
+    _statusBarStyle = UIStatusBarStyleLightContent;
+    // 是否隐藏导航栏（默认：NO不隐藏）
+    _isHiddenNavigationBar = NO;
+    // 设置导航栏左侧Item返回按钮
+    //self.isShowLeftItem = YES;
     // 设置根视图基本的背景色
     self.view.backgroundColor = DEFAULT_BACKGROUND_COLOR;
-    
 }
 
 #pragma mark - 初始化基本的参数内容
@@ -51,11 +53,11 @@
      *
      * 当导航栏是半透明效果的情况下，设置此属性可控制视图是否延伸到顶部导航栏下方
      */
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
     
 }
 
-#pragma mark - 初始化导航栏样式
+#pragma mark - 初始化原生导航栏样式
 - (void)initializeNavigation {
     
     /*
@@ -181,21 +183,130 @@
     //底部刷新方法，上拉加载更多（需子类重写）
 }
 
+#pragma mark - 当导航栏为白色时设置状态栏
+- (void)setStatusBarStyle:(UIStatusBarStyle)statusBarStyle {
+    _statusBarStyle = statusBarStyle;
+    if(_statusBarStyle == UIStatusBarStyleDefault){
+        [self wr_setNavBarBarTintColor:UIColor.whiteColor];//设置导航栏背景颜色
+        [self wr_setNavBarTitleColor:UIColor.blackColor];//设置标题颜色
+        [self wr_setNavBarTintColor:UIColor.blackColor];// 设置导航栏item颜色
+        [self wr_setNavBarShadowImageHidden:NO];//显示分割线
+        //self.isShowLeftItem = YES;
+    }
+}
+
 #pragma mark - 视图即将显示方法
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
     // 更新状态栏样式
-    if(self.statusBarStyle == UIStatusBarStyleDefault){
-        APPLICATION.statusBarStyle = self.statusBarStyle;
-    }
+    APPLICATION.statusBarStyle = _statusBarStyle;
+    // 隐藏导航栏
+    self.navigationController.navigationBar.hidden = _isHiddenNavigationBar;
+    
 }
 
 #pragma mark - 视图即将销毁方法
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
     // 更新状态栏样式
-    if(self.statusBarStyle == UIStatusBarStyleDefault){
+    if(_statusBarStyle == UIStatusBarStyleDefault)
         APPLICATION.statusBarStyle = UIStatusBarStyleLightContent;
+    // 隐藏导航栏
+    if(_isHiddenNavigationBar)
+        self.navigationController.navigationBar.hidden = !_isHiddenNavigationBar;
+    
+}
+
+#pragma mark - 是否显示导航栏左侧返回Item按钮（默认显示）
+/*
+- (void)setIsShowLeftItem:(BOOL)isShowLeftItem {
+    _isShowLeftItem = isShowLeftItem;
+    NSInteger vcCount = self.navigationController.viewControllers.count;
+    if (_isShowLeftItem && ( vcCount > 1 || self.navigationController.presentingViewController != nil)) {
+        if(_statusBarStyle == UIStatusBarStyleDefault) {
+            [self addNavigationItemWithImageNames:@[@"navigation_back_black"] isLeft:YES target:self action:@selector(backBtnClicked) tags:nil];
+        }else{
+            [self addNavigationItemWithImageNames:@[@"navigation_back_white"] isLeft:YES target:self action:@selector(backBtnClicked) tags:nil];
+        }
+    } else {
+        self.navigationItem.hidesBackButton = YES;
+        UIBarButtonItem *nilBar = [[UIBarButtonItem alloc] initWithCustomView:[UIView new]];
+        self.navigationItem.leftBarButtonItem = nilBar;
+    }
+}
+*/
+
+#pragma mark - 设置导航栏文字Item按钮
+- (void)addNavigationItemWithTitles:(NSArray *)titles isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags {
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    NSMutableArray *buttonArray = [NSMutableArray array];
+    NSInteger i = 0;
+    for (NSString *title in titles) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.frame = CGRectMake(0, 0, 30, 30);
+        //UIImage *image = [UIImage imageNamed:@"navigation_back_white"];
+        //[btn setImage:image forState:UIControlStateNormal];
+        [btn setTitle:title forState:UIControlStateNormal];
+        [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        //btn.titleLabel.font = [UIFont systemFontOfSize:16.f];
+        [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        btn.tag = [tags[i++] integerValue];
+        [btn sizeToFit];
+        //设置偏移
+        if (isLeft) {
+            [btn setContentEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
+        }else{
+            [btn setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+        }
+        
+        UIBarButtonItem * item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        [items addObject:item];
+        [buttonArray addObject:btn];
+    }
+    if (isLeft) {
+        self.navigationItem.leftBarButtonItems = items;
+    } else {
+        self.navigationItem.rightBarButtonItems = items;
+    }
+}
+
+#pragma mark - 设置导航栏图片Item按钮
+- (void)addNavigationItemWithImageNames:(NSArray *)imageNames isLeft:(BOOL)isLeft target:(id)target action:(SEL)action tags:(NSArray *)tags {
+    NSMutableArray *items = [[NSMutableArray alloc] init];
+    NSInteger i = 0;
+    for (NSString *imageName in imageNames) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        btn.frame = CGRectMake(0, 0, 30, 30);
+        [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+        // 设置偏移
+        if (isLeft) {
+            [btn setContentEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
+        }else{
+            [btn setContentEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
+        }
+        
+        btn.tag = [tags[i++] integerValue];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+        [items addObject:item];
+        
+    }
+    if (isLeft) {
+        self.navigationItem.leftBarButtonItems = items;
+    } else {
+        self.navigationItem.rightBarButtonItems = items;
+    }
+    
+}
+
+#pragma mark - 点击返回按钮
+- (void)backBtnClicked {
+    if (self.presentingViewController) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else {
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 

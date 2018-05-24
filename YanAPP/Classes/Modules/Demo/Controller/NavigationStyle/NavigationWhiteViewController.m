@@ -7,6 +7,7 @@
 //
 
 #import "NavigationWhiteViewController.h"
+#import <WRNavigationBar.h>
 
 @interface NavigationWhiteViewController ()
 
@@ -20,11 +21,7 @@
     
     self.title = @"白色导航栏";
     
-    self.statusBarStyle = UIStatusBarStyleDefault;
-    [self wr_setNavBarBarTintColor:UIColor.whiteColor];//设置导航栏背景颜色
-    [self wr_setNavBarTitleColor:UIColor.blackColor];//设置标题颜色
-    [self wr_setNavBarTintColor:UIColor.blackColor];// 设置导航栏item颜色
-    [self wr_setNavBarShadowImageHidden:NO];//显示分割线
+    self.isWhiteNavigationBar = YES;
     
 }
 

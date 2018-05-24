@@ -20,9 +20,18 @@
     
     self.title = @"隐藏导航栏";
     
-    self.hiddenNavigationBar = YES;// 设置导航栏隐藏
-    self.statusBarStyle = UIStatusBarStyleDefault;//设置状态栏字体颜色（黑色）
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    self.navigationController.navigationBar.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

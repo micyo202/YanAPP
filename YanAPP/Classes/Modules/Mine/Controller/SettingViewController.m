@@ -9,7 +9,7 @@
  ************************************************************/
 
 #import "SettingViewController.h"
-#import "MineManager.h"
+#import "MineHelper.h"
 
 @interface SettingViewController ()
 
@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     self.title = @"设置";
     
-    self.data = [[MineManager sharedMineManager] settingData];
+    self.data = [[MineHelper sharedMineHelper] settingData];
 }
 
 #pragma mark - cell点击方法

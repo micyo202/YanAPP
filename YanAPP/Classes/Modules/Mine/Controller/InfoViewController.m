@@ -10,7 +10,7 @@
 
 #import "InfoViewController.h"
 #import "MineTableViewCell.h"
-#import "MineManager.h"
+#import "MineHelper.h"
 
 @interface InfoViewController () <UITabBarControllerDelegate>
 
@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.data = [[MineManager sharedMineManager] infoData];
+    self.data = [[MineHelper sharedMineHelper] infoData];
 }
 
 - (void)didReceiveMemoryWarning {

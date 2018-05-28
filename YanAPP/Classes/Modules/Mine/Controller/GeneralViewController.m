@@ -9,7 +9,7 @@
  ************************************************************/
 
 #import "GeneralViewController.h"
-#import "MineManager.h"
+#import "MineHelper.h"
 
 @interface GeneralViewController ()
 
@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"所有样式";
-    self.data = [[MineManager sharedMineManager] generalData];
+    self.data = [[MineHelper sharedMineHelper] generalData];
 }
 
 #pragma mark - cell点击方法

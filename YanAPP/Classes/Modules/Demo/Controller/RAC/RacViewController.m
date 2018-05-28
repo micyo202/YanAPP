@@ -30,7 +30,7 @@
     
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.mas_equalTo(10);
+        make.top.mas_equalTo(HEIGHT_TOP);
         make.height.mas_equalTo(32);
     }];
     
@@ -41,7 +41,7 @@
     
     [textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.equalTo(self.view);
-        make.top.mas_equalTo(45);
+        make.top.mas_equalTo(HEIGHT_TOP + 32);
         make.height.mas_equalTo(32);
     }];
     

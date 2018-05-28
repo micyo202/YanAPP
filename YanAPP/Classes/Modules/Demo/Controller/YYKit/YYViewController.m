@@ -1,10 +1,12 @@
-//
-//  YYViewController.m
-//  YanAPP
-//
-//  Created by Apple on 2018/4/28.
-//  Copyright © 2018年 Yanzheng. All rights reserved.
-//
+/************************************************************
+ Class    : YYViewController.m
+ Describe : YYKit组件示例
+ Company  : Micyo
+ Author   : Yanzheng 严正
+ Date     : 2018-04-28
+ Version  : 1.0
+ Declare  : Copyright © 2018 Yanzheng. All rights reserved.
+ ************************************************************/
 
 #import "YYViewController.h"
 
@@ -20,7 +22,7 @@
     
     self.title = @"YYKit-组件";
     
-    YYLabel *yyLabel = [YYLabel new];
+    YYLabel *yyLabel = [[YYLabel alloc] init];
     yyLabel.text = @"YYLabel查询数据";
     yyLabel.textAlignment = NSTextAlignmentCenter;
     yyLabel.textVerticalAlignment = YYTextVerticalAlignmentCenter;

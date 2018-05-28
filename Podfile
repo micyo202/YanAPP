@@ -17,5 +17,6 @@ pod 'UIAlertController+Blocks'                  # 便捷的弹框提示封装
 pod 'CustomIOSAlertView', '~> 0.9.5'            # 自定义弹出对话视图
 pod 'WRNavigationBar', '~> 1.2.0'               # 顶部导航栏
 pod 'CYLTabBarController', '~> 1.17.4'          # 底部选项卡
+pod 'WMPageController', '~> 2.3.0'              # 滑动切换界面
 
 end

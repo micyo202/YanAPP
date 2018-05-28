@@ -1,0 +1,6 @@
+module Pods_YanAPP [system] {
+  umbrella header "Pods-YanAPP-umbrella.h"
+
+  export *
+  module * { export * }
+}

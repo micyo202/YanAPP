@@ -22,6 +22,8 @@
 		180FC29320AD868C005A758B /* NavigationHiddenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180FC29220AD868C005A758B /* NavigationHiddenViewController.m */; };
 		180FC29620AD8AAD005A758B /* NavigationOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180FC29520AD8AAD005A758B /* NavigationOtherViewController.m */; };
 		180FC29920AD8BB4005A758B /* NavigationAlphaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180FC29820AD8BB4005A758B /* NavigationAlphaViewController.m */; };
+		1839C51D20BCE39D006B3A26 /* QRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839C51C20BCE39D006B3A26 /* QRCodeViewController.m */; };
+		1839C52020BCF2EC006B3A26 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1839C51F20BCF2EC006B3A26 /* ScanViewController.m */; };
 		183ED1242085A9BA000226A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 183ED1232085A9BA000226A6 /* AppDelegate.m */; };
 		183ED12C2085A9BB000226A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183ED12B2085A9BB000226A6 /* Assets.xcassets */; };
 		183ED12F2085A9BB000226A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183ED12D2085A9BB000226A6 /* LaunchScreen.storyboard */; };
@@ -112,6 +114,10 @@
 		180FC29520AD8AAD005A758B /* NavigationOtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationOtherViewController.m; sourceTree = "<group>"; };
 		180FC29720AD8BB4005A758B /* NavigationAlphaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationAlphaViewController.h; sourceTree = "<group>"; };
 		180FC29820AD8BB4005A758B /* NavigationAlphaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationAlphaViewController.m; sourceTree = "<group>"; };
+		1839C51B20BCE39D006B3A26 /* QRCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
+		1839C51C20BCE39D006B3A26 /* QRCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
+		1839C51E20BCF2EC006B3A26 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		1839C51F20BCF2EC006B3A26 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 		183ED11F2085A9BA000226A6 /* YanAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YanAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		183ED1222085A9BA000226A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		183ED1232085A9BA000226A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -237,6 +243,7 @@
 			children = (
 				180062BA20882EF100B2D9EF /* DemoViewController.h */,
 				180062BB20882EF100B2D9EF /* DemoViewController.m */,
+				1839C51A20BCE37E006B3A26 /* QRCode */,
 				189EB43720BBFC7200CF4D7E /* PageScroll */,
 				1897D9F720B7BEAA005FD757 /* Drag */,
 				180FC28A20AD848C005A758B /* NavigationStyle */,
@@ -295,6 +302,17 @@
 				180FC29820AD8BB4005A758B /* NavigationAlphaViewController.m */,
 			);
 			path = NavigationStyle;
+			sourceTree = "<group>";
+		};
+		1839C51A20BCE37E006B3A26 /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				1839C51B20BCE39D006B3A26 /* QRCodeViewController.h */,
+				1839C51C20BCE39D006B3A26 /* QRCodeViewController.m */,
+				1839C51E20BCF2EC006B3A26 /* ScanViewController.h */,
+				1839C51F20BCF2EC006B3A26 /* ScanViewController.m */,
+			);
+			path = QRCode;
 			sourceTree = "<group>";
 		};
 		183ED1162085A9BA000226A6 = {
@@ -966,10 +984,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YanAPP/Pods-YanAPP-resources.sh",
 				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SGQRCode.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1019,6 +1039,7 @@
 				18975217209C3762002C3701 /* TableViewController.m in Sources */,
 				184449EB2099574A00C768A9 /* MineTableViewCell.m in Sources */,
 				18FA28E620B559E900984AC2 /* DemoHelper.m in Sources */,
+				1839C51D20BCE39D006B3A26 /* QRCodeViewController.m in Sources */,
 				180FC29320AD868C005A758B /* NavigationHiddenViewController.m in Sources */,
 				180FC28D20AD84A8005A758B /* NavigationStyleViewController.m in Sources */,
 				186E337E2094C2BD006B3D90 /* YYViewController.m in Sources */,
@@ -1026,6 +1047,7 @@
 				188E52382085F3C6000D9BD8 /* MineViewController.m in Sources */,
 				180FC29920AD8BB4005A758B /* NavigationAlphaViewController.m in Sources */,
 				188CBBE620AAD82E0073E61A /* RootWebViewController.m in Sources */,
+				1839C52020BCF2EC006B3A26 /* ScanViewController.m in Sources */,
 				180FC29020AD867A005A758B /* NavigationWhiteViewController.m in Sources */,
 				1862EE4D20905A9800687D44 /* MainTabBarController.m in Sources */,
 				188A797D20A42A4E0056B634 /* HudViewController.m in Sources */,
@@ -1208,7 +1230,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 76CZK5K999;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YanAPP/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YanAPP/Supporting Files/Info.plist";
@@ -1216,7 +1238,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micyo.YanAPP-com.prient.TaxGeneralPlus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1228,7 +1250,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 76CZK5K999;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/YanAPP/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/YanAPP/Supporting Files/Info.plist";
@@ -1236,7 +1258,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yan.YanAPP;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.micyo.YanAPP-com.prient.TaxGeneralPlus";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

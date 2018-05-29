@@ -26,6 +26,7 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
+  - SGQRCode (2.2.0)
   - "UIAlertController+Blocks (0.9.2)"
   - WMPageController (2.3.0)
   - WRNavigationBar (1.2.0)
@@ -44,6 +45,7 @@ DEPENDENCIES:
   - ReactiveObjC (~> 3.1.0)
   - SDCycleScrollView (~> 1.75)
   - SDWebImage (~> 4.0)
+  - SGQRCode (~> 2.2.0)
   - "UIAlertController+Blocks"
   - WMPageController (~> 2.3.0)
   - WRNavigationBar (~> 1.2.0)
@@ -61,6 +63,7 @@ SPEC REPOS:
     - ReactiveObjC
     - SDCycleScrollView
     - SDWebImage
+    - SGQRCode
     - "UIAlertController+Blocks"
     - WMPageController
     - WRNavigationBar
@@ -77,11 +80,12 @@ SPEC CHECKSUMS:
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SGQRCode: 6cd7f03ea6b74d1267820d427b07d1451b387c79
   "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
   WRNavigationBar: dc952230effbb646785f962587caaac06c60f229
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e9ef2e30ef65b5531ed8737328255cd1918f0edc
+PODFILE CHECKSUM: 89c75deed8ac175407f62e488408fd4f18283516
 
 COCOAPODS: 1.5.0

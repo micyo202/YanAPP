@@ -30,7 +30,7 @@ static NSString *const cellReuseIdentifier1 = @"cellReuseIdentifier1";
     self.title = @"Demo";
     
     _data = [[NSMutableArray alloc] init];
-    [_data addObjectsFromArray:@[@"AvoidCrash-防止闪退", @"自定义", @"TableView-集合列表", @"CollectionView-集合列表", @"AFN-请求", @"RAC-示例", @"YYKit-组件", @"SDCycleScrollView-轮播图", @"UIAlertController+Blocks-弹框Alert", @"UIAlertController+Blocks-底部Sheet", @"CustomIOSAlertView-自定义弹框视图", @"MBProgressHUD-示例", @"WebView-示例",  @"导航栏Style-示例", @"Button-长按放大挪动", @"PageScroll-滑动切换", @"Others-其他"]];
+    [_data addObjectsFromArray:@[@"AvoidCrash-防止闪退", @"自定义", @"TableView-集合列表", @"CollectionView-集合列表", @"AFN-请求", @"RAC-示例", @"YYKit-组件", @"SDCycleScrollView-轮播图", @"UIAlertController+Blocks-弹框Alert", @"UIAlertController+Blocks-底部Sheet", @"CustomIOSAlertView-自定义弹框视图", @"MBProgressHUD-示例", @"WebView-示例",  @"导航栏Style-示例", @"Button-长按放大挪动", @"PageScroll-滑动切换", @"QRCode-二维码", @"Others-其他"]];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellReuseIdentifier];
     [self.tableView registerClass:[DemoTableViewCell class] forCellReuseIdentifier:cellReuseIdentifier1];
@@ -149,6 +149,8 @@ static NSString *const cellReuseIdentifier1 = @"cellReuseIdentifier1";
         [self.navigationController pushViewController:[[NSClassFromString(@"DragViewController") alloc] init] animated:YES];
     } else if([cell.textLabel.text isEqualToString:@"PageScroll-滑动切换"]){
         [self.navigationController pushViewController:[[NSClassFromString(@"PageScrollViewController") alloc] init] animated:YES];
+    } else if([cell.textLabel.text isEqualToString:@"QRCode-二维码"]){
+        [self.navigationController pushViewController:[[NSClassFromString(@"QRCodeViewController") alloc] init] animated:YES];
     } else {
         DLog(@"%@", _data[indexPath.row]);
         NSDictionary *dic = [JsonUtil dictionaryOrArrayWithJSONSString:@"{\"code\":\"809\",\"name\":\"Hello World!\"}"];

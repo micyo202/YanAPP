@@ -16,16 +16,16 @@ PODS:
     - AFNetworking/NSURLSession
   - AvoidCrash (2.5.2)
   - CustomIOSAlertView (0.9.5)
-  - CYLTabBarController (1.17.8)
+  - CYLTabBarController (1.17.10)
   - Masonry (1.1.0)
   - MBProgressHUD (1.1.0)
   - MJRefresh (3.1.15.3)
   - ReactiveObjC (3.1.0)
   - SDCycleScrollView (1.75):
     - SDWebImage (>= 4.0.0)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
+  - SDWebImage (4.4.0):
+    - SDWebImage/Core (= 4.4.0)
+  - SDWebImage/Core (4.4.0)
   - SGQRCode (2.2.0)
   - "UIAlertController+Blocks (0.9.2)"
   - WMPageController (2.3.0)
@@ -52,7 +52,7 @@ DEPENDENCIES:
   - YYKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - AvoidCrash
     - CustomIOSAlertView
@@ -73,13 +73,13 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   AvoidCrash: 28c6916fe19bd2b84126b8dec7cbe61c9a12741d
   CustomIOSAlertView: cc4fa8e36219be3fd5ebcd40789f5b4aaae0f38e
-  CYLTabBarController: c1377ee2d0ccb6c7ec642806dc04f883f7c2851e
+  CYLTabBarController: 8879563850afc2517dd6f3f2ead4fcad886194ab
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
   SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SDWebImage: b534502786e43dde36dfcaee89356fe6df30e203
   SGQRCode: 6cd7f03ea6b74d1267820d427b07d1451b387c79
   "UIAlertController+Blocks": 80e28b92523fb58aba4d1bccec013d5a0b0bddb2
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
@@ -88,4 +88,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 89c75deed8ac175407f62e488408fd4f18283516
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

@@ -52,7 +52,10 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 }
 
 - (void)viewDidLayoutSubviews {
-    [self.tabBar layoutSubviews];//Fix issue #93
+    CGFloat deviceVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (deviceVersion >=10 && deviceVersion <10.2) {
+        [self.tabBar layoutSubviews];//Fix issue #93
+    }
     UITabBar *tabBar =  self.tabBar;
     for (UIControl *control in tabBar.subviews) {
         if ([control isKindOfClass:[UIControl class]]) {
@@ -185,7 +188,7 @@ static void * const CYLTabImageViewDefaultOffsetContext = (void*)&CYLTabImageVie
 
 - (void)hideTabBadgeBackgroundSeparator {
     [self.tabBar layoutIfNeeded];
-    self.tabBar.cyl_tabBadgeBackgroundSeparator.hidden = YES;
+    self.tabBar.cyl_tabBadgeBackgroundSeparator.alpha = 0;
     self.tabBar.barStyle = UIBarStyleBlack;
 }
 

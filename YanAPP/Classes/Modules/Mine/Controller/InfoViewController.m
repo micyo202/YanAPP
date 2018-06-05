@@ -12,7 +12,7 @@
 #import "MineTableViewCell.h"
 #import "MineHelper.h"
 
-@interface InfoViewController () <UITabBarControllerDelegate>
+@interface InfoViewController ()<UITabBarControllerDelegate>
 
 @end
 

@@ -36,7 +36,7 @@
 }
 
 - (void)mineTableViewCellButtonAction:(UISwitch *)sender {
-    DLog(@"button.tag = %ld", (long)sender.tag);
+    DLog(@"button.tag = %ld，按钮被点击", (long)sender.tag);
 }
 
 - (void)didReceiveMemoryWarning {

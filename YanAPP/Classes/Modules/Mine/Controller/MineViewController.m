@@ -27,8 +27,6 @@ static NSString * const headerFooterViewReuseIdentifier = @"mineHeaderFooterView
     
     self.navigationItem.title = @"我的";
     
-    self.navigationController.navigationBar.barTintColor = DEFAULT_ORANGE_COLOR;
-    
     [self.tableView registerClass:[MineTableViewCell class] forCellReuseIdentifier:reuseIdentifier];// 注册cell视图
     [self.tableView registerClass:[MineTableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:headerFooterViewReuseIdentifier];// 注册Header、Footer的cell
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
